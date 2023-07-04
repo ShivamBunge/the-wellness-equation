@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Regonia;
+  src: url('../fonts/regonia.otf');
+  font-display: swap;
+}
+
 @layer components {
   .bg-primary {
-    @apply bg-[#f7f7f7] dark:bg-customGray-dark;
+    @apply bg-[#F7F6FC] dark:bg-customGray-dark;
+ 
+    @apply bg-[#F2F2F2] dark:bg-customGray-dark;
+
   }
 
   .bg-secondary {
@@ -19,9 +28,12 @@
     @apply text-gray-500 dark:text-slate-500;
   }
 }
-
+h1,h2,h3,h4,h5,h6{
+  font-family: Regonia;
+}
 html {
   scroll-behavior: smooth;
+  font-family:'Times New Roman', Times, serif;
 }
 
 a,
