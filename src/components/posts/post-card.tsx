@@ -13,9 +13,10 @@ export default function PostCard({
 }) {
   return (
     <Link href={`/blog/${slug}`}>
-      <article className="mx-auto flex max-w-[25rem] flex-col overflow-hidden  shadow-xl shadow-gray-400 transition-all duration-300 hover:scale-[1.05] hover:shadow-2xl dark:shadow-black">
-        <div className="relative h-60">
+      <article className="mx-auto flex flex-col  ">
+        <div className="relative h-80 transition-all duration-300 hover:scale-[1.05]">
           <Image
+            className='rounded-lg'
             src={cover}
             alt="cover image"
             fill

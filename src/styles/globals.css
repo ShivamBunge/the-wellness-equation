@@ -10,10 +10,8 @@
 
 @layer components {
   .bg-primary {
-    @apply bg-[#F7F6FC] dark:bg-customGray-dark;
+    @apply bg-white dark:bg-customGray-dark;
  
-    @apply bg-[#F2F2F2] dark:bg-customGray-dark;
-
   }
 
   .bg-secondary {
