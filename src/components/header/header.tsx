@@ -18,7 +18,7 @@ export default function Header() {
         <h1 className="text-2xl">Subconsiously</h1>
       </Link>
       <div className="my-6 flex space-x-8 self-center md:my-0 md:self-auto">
-        <ul className="flex space-x-8">
+        <ul className="flex flex-wrap space-x-8">
           {NAV_ITEMS.map((item) => (
             <li
               key={item.path}
@@ -28,9 +28,9 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <div className="absolute right-[10vw] top-12 md:static">
+        {/* <div className="absolute right-[10vw] top-12 md:static">
           <ThemeToggle />
-        </div>
+        </div> */}
       </div>
     </nav>
   );

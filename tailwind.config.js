@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       colors: {
         customGray: {
-          light: '#2e3039',
+          light: '#f2f3fa',
           base: '#eeeeee',
           dark: '#1f2028',
         },
-        customSecondary:'#EACABB',
+        customSecondary:'#FFDD79',
       },
     },
   },

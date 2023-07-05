@@ -25,5 +25,5 @@
 }
 
 .notion-table-of-contents-active-item span {
-  @apply !text-[#968FC3];
+  @apply !text-[#FFDD79];
 }

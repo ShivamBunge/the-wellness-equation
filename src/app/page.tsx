@@ -1,7 +1,7 @@
 import Image from "next/image";
 import img from "../../public/hero.jpg"
 export const metadata = {
-  title: 'Welcome | Subconsciously',
+  title: 'Subconsciously',
 };
 
 
@@ -9,17 +9,17 @@ export default function HomePage() {
   return (
     <>
       <div className="flex relative">
-        <div className="absolute top-0 left-0 w-full h-full">
+        {/* <div className="absolute top-0 left-0 w-full h-full">
           <div className="h-20 w-20 bg-customSecondary rounded-full"></div>
           <div className="h-10 w-10 bg-customSecondary rounded-full absolute bottom-0 left-20"></div>
           <div className="h-20 w-20 bg-customSecondary rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
           <div className="h-20 w-20 bg-customSecondary rounded-full absolute bottom-0 right-0"></div>
-          <div className="h-10 w-10 bg-customSecondary rounded-full absolute bottom-0 right-20"></div>
+          <div className="h-10 w-10 bg-customSecondary rounded-full absolute "></div>
 
-        </div>
-        <div className="relative mx-auto h-80 w-[300px] ">
+        </div> */}
+        <div className="relative mx-auto h-80 w-80 ">
           <Image
-            className="rounded-t-full"
+            className="rounded-t-full opacity-90"
             src={img}
             alt="cover image"
             fill
@@ -27,10 +27,10 @@ export default function HomePage() {
           />
         </div>
         <div className="absolute inset-0 flex flex-col justify-start mt-12 ">
-          <h1 className="text-6xl">
+          <h1 className="text-4xl md:text-6xl">
             Subconsciously
           </h1>
-          <h3 className="text-2xl mt-5">
+          <h3 className="text-xl md:text-2xl mt-5">
             Exploring the depths of the mind
           </h3>
         </div>
@@ -51,9 +51,9 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div className="mt-36 flex gap-10 h-[30rem]">
+      <div className="mt-36 flex flex-wrap md:flex-nowrap gap-10 ">
         <div className="bg-customSecondary p-5 rounded-lg">
-          <h1 className="text-4xl my-8">
+          <h1 className="text-3xl md:text-5xl my-8">
             Subconsciously
           </h1>
           <p className="text-xl">
@@ -63,10 +63,10 @@ export default function HomePage() {
 
         </div>
         <div className="flex flex-col gap-10 ">
-          <div className="bg-customSecondary h-[10rem] p-5 text-xl rounded-lg">
+          <div className="bg-customSecondary  p-5 text-xl rounded-lg">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta vitae possimus delectus hic quidem ad magnam quae similique commodi sed. Laudantium maxime totam, ex dolorem facere pariatur saepe beatae excepturi.
           </div>
-          <div className="bg-customSecondary h-[20rem] p-5 text-xl rounded-lg">
+          <div className="bg-customSecondary p-5 text-xl rounded-lg">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta vitae possimus delectus hic quidem ad magnam quae similique commodi sed. Laudantium maxime totam, ex dolorem facere pariatur saepe beatae excepturi.
 
           </div>
