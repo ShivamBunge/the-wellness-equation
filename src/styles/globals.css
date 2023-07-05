@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @font-face {
   font-family: Regonia;
@@ -31,7 +32,7 @@ h1,h2,h3,h4,h5,h6{
 }
 html {
   scroll-behavior: smooth;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a,
