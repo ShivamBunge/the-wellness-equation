@@ -9,7 +9,7 @@ module.exports = {
           base: '#eeeeee',
           dark: '#1f2028',
         },
-        customSecondary:'#6DAEDB',
+        customSecondary:'#eeeeee',
       },
     },
   },

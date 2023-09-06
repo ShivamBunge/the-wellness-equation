@@ -1,38 +1,36 @@
 import Image from "next/image";
-import img from "../../public/hero.jpg"
+import img from "../../public/clouds.jpg"
+
+import { getAllPostsFromNotion } from '@/services/posts';
+import { toUniqueArray } from '@/utils/to-unique-array';
+import Container from '@/components/container';
+
+
 export const metadata = {
   title: 'Subconsciously',
 };
 
 
-export default function HomePage() {
+export default async function HomePage() {
+  const allPosts = await getAllPostsFromNotion();
+
+  const allCategories = toUniqueArray(
+    allPosts
+      .filter((post) => post.published)
+      .map((post) => post.categories)
+      .flat()
+  ).sort();
+
   return (
     <>
       <div className="flex relative items-center">
-        {/* <div className="absolute top-0 left-0 w-full h-full">
-          <div className="h-20 w-20 bg-customSecondary rounded-full"></div>
-          <div className="h-10 w-10 bg-customSecondary rounded-full absolute bottom-0 left-20"></div>
-          <div className="h-20 w-20 bg-customSecondary rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="h-20 w-20 bg-customSecondary rounded-full absolute bottom-0 right-0"></div>
-          <div className="h-10 w-10 bg-customSecondary rounded-full absolute "></div>
-
-        </div> */}
-        {/* <div className="relative mx-auto h-[20rem] md:h-[28rem] w-80 ">
-          <Image
-            className="rounded-t-full opacity-80"
-            src={img}
-            alt="cover image"
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        </div> */}
         <div className="relative mx-auto h-[20rem] sm:h-[30rem] md:h-[40rem] w-screen ">
           <Image
-            className="opacity-80"
+            className="opacity-60"
             src={img}
             alt="cover image"
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit:'cover' }}
           />
         </div>
         <div className="absolute flex flex-col sm:left-10">
@@ -45,13 +43,12 @@ export default function HomePage() {
         </div>
 
       </div>
-      <div className="relative mt-36">
-        <div className="h-10 w-10 bg-customSecondary rounded-full absolute bottom-0 left-20"></div>
-        {/* <div className="h-20 w-20 bg-customSecondary rounded-full absolute bottom-0 right-0"></div> */}
-        <div className="h-10 w-10 bg-customSecondary rounded-full absolute bottom-20 right-20"></div>
-        <h1 className="text-4xl font-semibold text-center">
+
+      <Container>
+      <div className="mt-36">
+        <h2 className="text-4xl font-semibold text-center">
           About
-        </h1>
+        </h2>
         <p className="mt-9 text-lg font-thin">
           Join us on our journey of enlightenment and exploration as we delve into health and wellness. We aim to educate everyone about health covering topics about mental and physical health, fitness. Mission is to inspire and motivate you to discover new perspectives and lead a fulfilling life. Self empowerment is the key to unlocking our full potential and to serve everyone around us.
         </p>
@@ -60,11 +57,18 @@ export default function HomePage() {
         </p>
       </div>
 
+      <div className="mt-36">
+        <h2 className="text-4xl font-semibold text-center">
+          Blogs
+        </h2>
+        {/* adding recent blogs here -> redirect to blogs page */}
+      </div>
+
       <div className="mt-36 flex flex-wrap md:flex-nowrap gap-10 ">
         <div className="bg-customSecondary p-8 rounded-lg">
-          <h1 className="text-3xl md:text-5xl my-8">
+          <h2 className="text-3xl md:text-5xl my-8">
             Subconsciously
-          </h1>
+          </h2>
           <p className="text-lg">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta vitae possimus delectus hic quidem ad magnam quae similique commodi sed. Laudantium maxime totam, ex dolorem facere pariatur saepe beatae excepturi.
 
@@ -82,7 +86,7 @@ export default function HomePage() {
         </div>
 
       </div>
-
+      </Container>
     </>
   )
 }

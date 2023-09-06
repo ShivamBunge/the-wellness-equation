@@ -27,9 +27,13 @@
     @apply text-gray-500 dark:text-slate-500;
   }
 }
-h1,h2,h3,h4,h5,h6{
+h1{
   font-family: Regonia;
 }
+h2,h3,h4,h5,h6{
+  color: palevioletred;
+
+} 
 html {
   scroll-behavior: smooth;
   font-family: 'Montserrat', sans-serif;

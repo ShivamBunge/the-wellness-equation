@@ -3,6 +3,8 @@ import SearchBar from '@/components/filter/search-bar';
 import PostsGrid from '@/components/posts/posts-grid';
 import { getAllPostsFromNotion } from '@/services/posts';
 import { toUniqueArray } from '@/utils/to-unique-array';
+import Container from '@/components/container';
+
 
 export const metadata = {
   title: 'Blog',
@@ -20,12 +22,12 @@ export default async function BlogPage() {
   ).sort();
 
   return (
-    <>
+    <Container>
       <section className="mb-16 mt-0 space-y-8 md:mt-20">
         <SearchBar />
         <CategoryFilter allCategories={allCategories} />
       </section>
       <PostsGrid allPosts={allPosts} />
-    </>
+    </Container>
   );
 }
