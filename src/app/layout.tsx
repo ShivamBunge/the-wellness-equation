@@ -7,7 +7,6 @@ import Provider from '@/components/provider';
 import ScrollUpButton from '@/components/scroll-up-button';
 import '@/styles/globals.css';
 import '@/styles/paginate.css';
-import Container from '@/components/container';
 
 export const metadata = {
   title: {
@@ -24,11 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Provider>
-          <Container>
-            <Header />
-          </Container>
 
+        <Header />
+
+        <Provider>
           <main>{children}</main>
           <div className="fixed bottom-12 right-10">
             <ScrollUpButton />

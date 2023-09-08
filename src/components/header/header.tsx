@@ -1,5 +1,7 @@
+"use client"
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import logo from "../../../public/fav.jpg"
+import logo from "../../../public/fav.svg"
 
 import NavLink from '@/components/header/nav-link';
 import ThemeToggle from '@/components/theme-toggle';
@@ -12,8 +14,25 @@ const NAV_ITEMS = [
 
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <nav className="flex flex-col justify-between py-12 md:flex-row ">
+    <nav className={`flex justify-around fixed w-full top-0 transition-all duration-300 z-20 py-2 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`} >
       <Link href="/" className="self-start md:self-auto">
         <h1 className="text-2xl flex items-center">
           <Image
@@ -23,10 +42,10 @@ export default function Header() {
             alt="logo"
             style={{ objectFit: 'cover' }}
           />
-          Subconsiously
+
         </h1>
       </Link>
-      <div className="my-6 flex space-x-8 self-center md:my-0 md:self-auto">
+      <div className="my-6 flex items-center space-x-8 self-center md:self-auto">
         <ul className="flex flex-wrap space-x-5">
           {NAV_ITEMS.map((item) => (
             <li
@@ -44,3 +63,4 @@ export default function Header() {
     </nav>
   );
 }
+

@@ -23,7 +23,7 @@ export default async function BlogPage() {
 
   return (
     <Container>
-      <section className="mb-16 mt-0 space-y-8 md:mt-20">
+      <section className="mb-16 space-y-8 mt-24">
         <SearchBar />
         <CategoryFilter allCategories={allCategories} />
       </section>

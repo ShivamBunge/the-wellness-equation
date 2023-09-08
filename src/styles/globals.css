@@ -29,9 +29,12 @@
 }
 h1{
   font-family: Regonia;
+  color:#081F62;
+
 }
 h2,h3,h4,h5,h6{
-  color: palevioletred;
+  color: #051747;
+  color:#081F62;
 
 } 
 html {
