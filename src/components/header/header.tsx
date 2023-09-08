@@ -50,7 +50,7 @@ export default function Header() {
           {NAV_ITEMS.map((item) => (
             <li
               key={item.path}
-              className="text-customSecondary hover:text-primary whitespace-nowrap py-2 text-lg font-medium transition-all duration-300"
+              className="text-customBlue-base hover:text-primary whitespace-nowrap py-2 text-lg font-medium transition-all duration-300"
             >
               <NavLink path={item.path}>{item.name}</NavLink>
             </li>

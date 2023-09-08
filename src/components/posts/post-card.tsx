@@ -25,7 +25,7 @@ export default function PostCard({
         </div>
         <div className="flex h-48 flex-col p-4">
           <CategoryList categories={categories} />
-          <h3 className="line-clamp-2 h-12 text-lg font-serif hover:text-blue-600">{title}</h3>
+          <h3 className="line-clamp-2 h-12 font-serif text-customBlue-base hover:text-primary whitespace-nowrap py-2 text-lg font-medium transition-all duration-300">{title}</h3>
           <time className="mb-4 text-sm text-gray-400">{date}</time>
         </div>
       </article>

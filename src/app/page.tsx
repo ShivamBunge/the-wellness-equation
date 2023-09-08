@@ -26,7 +26,7 @@ export default async function HomePage() {
       <div className="flex relative items-center">
         <div className="relative mx-auto h-screen w-screen ">
           <Image
-            className="opacity-70"
+            className="opacity-90"
             src={img}
             alt="cover image"
             fill
@@ -38,7 +38,7 @@ export default async function HomePage() {
           <h1 className="text-4xl md:text-6xl">
             Subconsciously
           </h1>
-          <h3 className="text-xl md:text-2xl mt-5 text-secondary">
+          <h3 className="text-xl md:text-2xl mt-5 text-black">
             Exploring the depths of the mind
           </h3>
         </div>
@@ -65,7 +65,7 @@ export default async function HomePage() {
         </div>
 
         <div className="mt-36 flex flex-wrap md:flex-nowrap gap-10 ">
-          <div className="bg-customSecondary p-8 rounded-lg">
+          <div className="bg-customGray-base p-8 rounded-lg">
             <h2 className="text-3xl md:text-5xl my-8">
               Subconsciously
             </h2>
@@ -76,10 +76,10 @@ export default async function HomePage() {
 
           </div>
           <div className="flex flex-col gap-10 ">
-            <div className="bg-customSecondary  p-8 text-lg rounded-lg">
+            <div className="bg-customGray-base  p-8 text-lg rounded-lg">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta vitae possimus delectus hic quidem ad magnam quae similique commodi sed. Laudantium maxime totam, ex dolorem facere pariatur saepe beatae excepturi.
             </div>
-            <div className="bg-customSecondary p-5 text-lg rounded-lg">
+            <div className="bg-customGreen-base p-5 text-lg rounded-lg">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta vitae possimus delectus hic quidem ad magnam quae similique commodi sed. Laudantium maxime totam, ex dolorem facere pariatur saepe beatae excepturi.
 
             </div>

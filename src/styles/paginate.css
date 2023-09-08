@@ -7,7 +7,7 @@
 }
 
 .paginate .selected {
-  @apply rounded-full bg-[#FFDD79] text-white;
+  @apply rounded-full bg-customGreen-dark text-white;
 }
 
 .paginate .disabled {
