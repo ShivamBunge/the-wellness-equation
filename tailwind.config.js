@@ -11,8 +11,8 @@ module.exports = {
         },
         customGreen: {
           light: '#CCFD7F',
-          base: '#DFFE48',
-          dark: '#ccff00',
+          base: '#CCFD7F',
+          dark: '#DFFE48',
         },
         customBlue: {
           light: '#1E90FF',

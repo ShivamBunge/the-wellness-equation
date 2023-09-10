@@ -47,7 +47,7 @@ export default async function PostPage({
     <>
       <article
         data-revalidated-at={new Date().getTime()}
-        className="mt-4 flex flex-col items-center md:mt-20"
+        className="mt-36 flex flex-col items-center "
       >
         <div className="relative aspect-[3/2] w-[90vw] max-w-[900px]">
           <Image

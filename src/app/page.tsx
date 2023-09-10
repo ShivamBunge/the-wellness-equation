@@ -69,7 +69,7 @@ export default async function HomePage() {
             <h2 className="text-3xl md:text-5xl my-8">
               Subconsciously
             </h2>
-            <p className="text-lg">
+            <p className="text-lg font-thin">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta vitae possimus delectus hic quidem ad magnam quae similique commodi sed. Laudantium maxime totam, ex dolorem facere pariatur saepe beatae excepturi.
 
             </p>

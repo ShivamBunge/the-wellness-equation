@@ -11,7 +11,7 @@ import '@/styles/paginate.css';
 export const metadata = {
   title: {
     default: 'Subconsciously',
-    template: '%s | Shivam Bunge',
+    template: '%s | Subconsciously',
   },
 };
 
