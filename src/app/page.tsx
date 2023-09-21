@@ -1,5 +1,8 @@
 import Image from "next/image";
-import img from "../../public/nature.jpg"
+import img from "../../public/img3.png"
+import ab1 from "../../public/about1.jpg"
+import ab2 from "../../public/about2.jpg"
+import ab3 from "../../public/about3.jpg"
 
 import { getAllPostsFromNotion } from '@/services/posts';
 import { toUniqueArray } from '@/utils/to-unique-array';
@@ -23,28 +26,32 @@ export default async function HomePage() {
 
   return (
     <>
-      <div className="flex relative items-center">
-        <div className="relative mx-auto h-screen w-screen ">
-          <Image
-            className="opacity-90"
-            src={img}
-            alt="cover image"
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-
-        <div className="absolute flex flex-col mx-10">
-          <h1 className="text-4xl md:text-6xl">
-            Subconsciously
-          </h1>
-          <h3 className="text-xl md:text-2xl mt-5 text-black">
-            Exploring the depths of the mind
-          </h3>
-        </div>
-      </div>
-
       <Container>
+        <div className="flex relative items-center">
+          <div className="flex w-3/5">
+            <div className="h-screen">
+              <Image
+                className="opacity-85"
+                src={img}
+                alt="cover image"
+                fill
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          </div>
+
+
+          <div className="absolute flex flex-col justify-start">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl">
+              Subconsciously
+            </h1>
+            <h3 className="text-xl md:text-2xl mt-5 text-blue-600">
+              Exploring the depths of the mind ..
+            </h3>
+          </div>
+        </div>
+
+
         <div className="mt-36">
           <h2 className="text-4xl font-semibold text-center">
             About
@@ -55,6 +62,17 @@ export default async function HomePage() {
           <p className="mt-9 text-lg font-thin">
             Get ready to be captivated by thought-provoking content and subscribe to our channel if this truly excites you and resonates with your passion.
           </p>
+          <div className="flex flex-col sm:flex-row gap-5 md:gap-10 mt-24">
+            <div className="p-5 sm:p-0 sm:h-[32rem] md:h-[36rem] w-100 sm:w-1/3">
+              <Image src={ab1} alt="" />
+            </div>
+            <div className="p-5 sm:p-0 sm:h-[32rem] md:h-[36rem] flex items-center w-100 sm:w-1/3">
+              <Image src={ab2} alt="" />
+            </div>
+            <div className="p-5 sm:p-0 sm:h-[32rem] md:h-[36rem] w-100 sm:w-1/3">
+              <Image src={ab3} alt="" />
+            </div>
+          </div>
         </div>
 
         <div className="mt-36">
