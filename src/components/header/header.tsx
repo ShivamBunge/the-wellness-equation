@@ -9,7 +9,7 @@ import Image from 'next/image';
 const NAV_ITEMS = [
   { path: 'blog', name: 'BLOG' },
   { path: 'about', name: 'ABOUT' },
-  { path: 'contact', name: 'CONTACT' },
+  { path: 'join', name: 'JOIN COMMUNITY' },
 ];
 
 
