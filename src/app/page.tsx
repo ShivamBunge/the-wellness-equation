@@ -52,7 +52,7 @@ export default async function HomePage() {
         </div>
 
 
-        <div className="mt-36">
+        <div id="about" className="mt-36">
           <h2 className="text-4xl font-semibold text-center">
             About
           </h2>

@@ -7,9 +7,9 @@ import NavLink from '@/components/header/nav-link';
 import ThemeToggle from '@/components/theme-toggle';
 import Image from 'next/image';
 const NAV_ITEMS = [
-  { path: 'blog', name: 'BLOG' },
-  { path: 'about', name: 'ABOUT' },
-  { path: 'join', name: 'JOIN COMMUNITY' },
+  { path: '/blog', name: 'BLOG' },
+  { path: '#about', name: 'ABOUT' },
+  { path: '/join', name: 'JOIN COMMUNITY' },
 ];
 
 
